@@ -1,0 +1,21 @@
+In this project we wrote a basic bootloader and createimage. 
+
+The first part of the project required us to write bootblock.s, which is loaded by the BIOS from the first sector of memory and set to execute. 
+The code we wrote moved itself to 0xa0800000. It writes the kernel from 0xa0800200, and then transfers control to the kernel.
+
+The second part of the project required us to write the code that actually creates the image file, given two executables representing the bootblock and kernel, respectively. 
+We parsed these ELF files and wrote their code segments into the image file. In the bootblock portion of the image file, we made sure that the last two bytes were 0x55 and 0xAA, so that the BIOS would know that the device holding this image was bootable.
+
+
+
+This document includes two sub-documents:task3 and task 4, and a report of project1.
+
+1.task3
+  Inluding createimage, kernel.c, Makefile, bootblock.s, ld.script
+
+  These files can load executable parts of kernel and bootblock into image. Createimage is provided by the teacher.
+
+2.task4
+  Including kernel.c, Makefile, bootblock.s, createimage.c, ld.script
+
+  These files can load executable parts of kernel and bootblock into image. createimage.c is written by myself.
