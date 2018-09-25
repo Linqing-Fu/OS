@@ -1,2 +1,2 @@
 # OS
-operating system homework
+operating system coursework
